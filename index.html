@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loqelo | Everything your place needs. Coming February 2027</title>
+  <meta name="description" content="Loqelo connects you with trusted service providers for your home, garden and office. Join the waitlist for the February 2027 launch.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: { ink: '#10202B', pine: '#1F6F5C', pinedark: '#17564A', mist: '#F2F6F6', sand: '#E9C46A', line: '#DCE5E6' }
+      } }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .tab-panel[hidden] { display: none; }
+    .fade-in { animation: fadeIn .35s ease both; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .progress { animation: grow 12s linear forwards; }
+    @keyframes grow { from { width: 0; } to { width: 100%; } }
+    @media (prefers-reduced-motion: reduce) { *, .fade-in, .progress { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+
+<body class="bg-white text-ink antialiased">
+  <a href="#waitlist" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-ink focus:text-white focus:px-4 focus:py-2 rounded">Skip to waitlist</a>
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-white/85 backdrop-blur border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 text-xl font-extrabold tracking-tight" aria-label="Loqelo home">
+        <span class="w-8 h-8 rounded-lg bg-pine text-white grid place-items-center text-sm"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+        Loqelo
+      </a>
+      <div class="flex items-center gap-3">
+        <label for="lang" class="sr-only">Language</label>
+        <div class="relative">
+          <i class="fa-solid fa-globe absolute left-3 top-1/2 -translate-y-1/2 text-ink/50 pointer-events-none text-sm" aria-hidden="true"></i>
+          <select id="lang" class="appearance-none bg-mist border border-line rounded-lg pl-9 pr-8 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-pine">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-ink/50 pointer-events-none" aria-hidden="true"></i>
+        </div>
+        <a href="#waitlist" data-i18n="nav_cta" class="hidden sm:inline-block bg-ink text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-pine transition-colors">Join waitlist</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden bg-ink text-white">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=2000&q=70" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30" fetchpriority="high" onerror="this.style.display='none'">
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40"></div>
+      <div class="relative max-w-6xl mx-auto px-5">
+        <p class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm">
+          <span class="w-2 h-2 rounded-full bg-sand"></span><span data-i18n="badge">Coming in February 2027</span>
+        </p>
+        <h1 data-i18n="title" class="mt-6 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-3xl leading-[1.05]">Everything your place needs.</h1>
+        <p data-i18n="sub" class="mt-6 max-w-xl text-lg text-white/80">One place to find trusted professionals for your home, garden and office. Describe the job, compare offers, choose with confidence.</p>
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a href="#waitlist" data-tab="customers" data-i18n="cta_customer" class="cta-link bg-sand text-ink font-semibold px-6 py-3.5 rounded-xl hover:bg-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white">I need a service</a>
+          <a href="#waitlist" data-tab="contractors" data-i18n="cta_pro" class="cta-link border border-white/40 font-semibold px-6 py-3.5 rounded-xl hover:bg-white hover:text-ink transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white">I provide services</a>
+        </div>
+        <ul class="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-white/75 text-sm">
+          <li><i class="fa-solid fa-house mr-2 text-sand" aria-hidden="true"></i>Home</li>
+          <li><i class="fa-solid fa-seedling mr-2 text-sand" aria-hidden="true"></i>Garden</li>
+          <li><i class="fa-solid fa-building mr-2 text-sand" aria-hidden="true"></i>Office</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section class="py-20 sm:py-28 bg-mist" aria-labelledby="media-title">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 id="media-title" data-i18n="media_title" class="text-3xl sm:text-4xl font-bold tracking-tight max-w-2xl">See Loqelo in action</h2>
+        <p class="mt-3 text-ink/70 max-w-xl">A first look at how requests, offers and chats come together.</p>
+
+        <!-- Mock video player -->
+        <div id="player" class="mt-10 relative aspect-video rounded-2xl overflow-hidden bg-ink shadow-xl">
+          <img id="player-thumb" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1600&q=70" alt="Loqelo promotional video thumbnail" class="absolute inset-0 w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-ink/40"></div>
+          <button id="play" type="button" class="absolute inset-0 m-auto w-20 h-20 rounded-full bg-white text-pine text-2xl grid place-items-center shadow-lg hover:scale-105 transition-transform focus:outline-none focus-visible:ring-4 focus-visible:ring-sand" aria-label="Play promotional video">
+            <i class="fa-solid fa-play ml-1" aria-hidden="true"></i>
+          </button>
+          <div class="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-ink/90 to-transparent text-white">
+            <div class="h-1 rounded bg-white/25 overflow-hidden"><div id="bar" class="h-full bg-sand w-0"></div></div>
+            <div class="mt-2 flex justify-between text-xs text-white/80">
+              <span id="status">Promo video · 0:45</span><span>Demo preview</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screenshots -->
+        <ul class="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <li class="rounded-xl overflow-hidden bg-white border border-line">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=70" alt="Request form screen" class="aspect-[3/4] w-full object-cover" loading="lazy" onerror="this.style.display='none'">
+            <p class="p-3 text-sm font-medium">Describe your need</p>
+          </li>
+          <li class="rounded-xl overflow-hidden bg-white border border-line">
+            <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&q=70" alt="Provider matches screen" class="aspect-[3/4] w-full object-cover" loading="lazy" onerror="this.style.display='none'">
+            <p class="p-3 text-sm font-medium">Compare providers</p>
+          </li>
+          <li class="rounded-xl overflow-hidden bg-white border border-line">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=70" alt="Offers dashboard screen" class="aspect-[3/4] w-full object-cover" loading="lazy" onerror="this.style.display='none'">
+            <p class="p-3 text-sm font-medium">Review offers</p>
+          </li>
+          <li class="rounded-xl overflow-hidden bg-white border border-line">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=70" alt="Booking confirmation screen" class="aspect-[3/4] w-full object-cover" loading="lazy" onerror="this.style.display='none'">
+            <p class="p-3 text-sm font-medium">Book with confidence</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 sm:py-28" aria-labelledby="how-title">
+      <div class="max-w-6xl mx-auto px-5">
+        <h2 id="how-title" data-i18n="how_title" class="text-3xl sm:text-4xl font-bold tracking-tight">How it works</h2>
+        <ol class="mt-12 grid md:grid-cols-3 gap-6">
+          <li class="relative p-7 rounded-2xl border border-line">
+            <span class="w-11 h-11 rounded-full bg-pine text-white font-bold grid place-items-center">1</span>
+            <h3 data-i18n="step1" class="mt-5 text-xl font-semibold">Describe your need</h3>
+            <p class="mt-2 text-ink/70">Tell us what you need done, where and when. It takes about two minutes.</p>
+          </li>
+          <li class="relative p-7 rounded-2xl border border-line">
+            <span class="w-11 h-11 rounded-full bg-pine text-white font-bold grid place-items-center">2</span>
+            <h3 data-i18n="step2" class="mt-5 text-xl font-semibold">Get matched with providers</h3>
+            <p class="mt-2 text-ink/70">We connect your request with suitable professionals near you.</p>
+          </li>
+          <li class="relative p-7 rounded-2xl border border-line">
+            <span class="w-11 h-11 rounded-full bg-pine text-white font-bold grid place-items-center">3</span>
+            <h3 data-i18n="step3" class="mt-5 text-xl font-semibold">Receive offers &amp; select</h3>
+            <p class="mt-2 text-ink/70">Compare quotes and profiles, then pick the provider that fits.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section id="waitlist" class="py-20 sm:py-28 bg-mist scroll-mt-16" aria-labelledby="wl-title">
+      <div class="max-w-2xl mx-auto px-5">
+        <h2 id="wl-title" data-i18n="wl_title" class="text-3xl sm:text-4xl font-bold tracking-tight text-center">Join the waitlist</h2>
+        <p class="mt-3 text-center text-ink/70">Be first in line when Loqelo launches in February 2027.</p>
+
+        <div class="mt-10 bg-white rounded-2xl border border-line shadow-sm p-5 sm:p-8">
+          <div role="tablist" aria-label="Waitlist type" class="grid grid-cols-2 gap-1 p-1 bg-mist rounded-xl">
+            <button role="tab" id="tab-customers" aria-controls="panel-customers" data-tab="customers" type="button" class="tab py-2.5 rounded-lg text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pine">
+              <i class="fa-solid fa-user mr-2" aria-hidden="true"></i><span data-i18n="tab_customers">Customers</span>
+            </button>
+            <button role="tab" id="tab-contractors" aria-controls="panel-contractors" data-tab="contractors" type="button" class="tab py-2.5 rounded-lg text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-pine">
+              <i class="fa-solid fa-screwdriver-wrench mr-2" aria-hidden="true"></i><span data-i18n="tab_contractors">Contractors</span>
+            </button>
+          </div>
+
+          <!-- Customers -->
+          <div id="panel-customers" role="tabpanel" aria-labelledby="tab-customers" class="tab-panel mt-6">
+            <form class="wl-form space-y-5" novalidate>
+              <div>
+                <label for="c-email" class="block text-sm font-medium mb-1.5">Email address</label>
+                <input id="c-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="w-full border border-line rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pine focus:border-pine">
+              </div>
+              <div>
+                <label for="c-country" class="block text-sm font-medium mb-1.5">Country of residence</label>
+                <select id="c-country" name="country" required class="country w-full border border-line rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-pine focus:border-pine"></select>
+              </div>
+              <fieldset>
+                <legend class="text-sm font-medium mb-1.5">I am an</legend>
+                <div class="grid grid-cols-2 gap-3">
+                  <label class="flex items-center gap-3 border border-line rounded-lg px-4 py-3 cursor-pointer has-[:checked]:border-pine has-[:checked]:bg-pine/5">
+                    <input type="radio" name="c-type" value="individual" checked class="accent-pine"> Individual
+                  </label>
+                  <label class="flex items-center gap-3 border border-line rounded-lg px-4 py-3 cursor-pointer has-[:checked]:border-pine has-[:checked]:bg-pine/5">
+                    <input type="radio" name="c-type" value="business" class="accent-pine"> Business
+                  </label>
+                </div>
+              </fieldset>
+              <label class="flex items-start gap-3 text-sm text-ink/70">
+                <input type="checkbox" name="gdpr" required class="mt-1 accent-pine">
+                <span>I agree to the processing of my personal data in accordance with the <a href="#privacy" class="underline text-pine">Privacy Policy</a> (GDPR). I can withdraw consent at any time.</span>
+              </label>
+              <p class="err hidden text-sm text-red-700" role="alert"></p>
+              <button type="submit" class="w-full bg-pine hover:bg-pinedark text-white font-semibold py-3.5 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-pine">Join as a customer</button>
+            </form>
+          </div>
+
+          <!-- Contractors -->
+          <div id="panel-contractors" role="tabpanel" aria-labelledby="tab-contractors" class="tab-panel mt-6" hidden>
+            <form class="wl-form space-y-5" novalidate>
+              <div>
+                <label for="p-email" class="block text-sm font-medium mb-1.5">Email address</label>
+                <input id="p-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" class="w-full border border-line rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pine focus:border-pine">
+              </div>
+              <div>
+                <label for="p-country" class="block text-sm font-medium mb-1.5">Country of operation</label>
+                <select id="p-country" name="country" required class="country w-full border border-line rounded-lg px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-pine focus:border-pine"></select>
+              </div>
+              <fieldset>
+                <legend class="text-sm font-medium mb-1.5">I operate as a</legend>
+                <div class="grid grid-cols-2 gap-3">
+                  <label class="flex items-center gap-3 border border-line rounded-lg px-4 py-3 cursor-pointer has-[:checked]:border-pine has-[:checked]:bg-pine/5">
+                    <input type="radio" name="p-type" value="business" checked class="accent-pine"> Business
+                  </label>
+                  <label class="flex items-center gap-3 border border-line rounded-lg px-4 py-3 cursor-pointer has-[:checked]:border-pine has-[:checked]:bg-pine/5">
+                    <input type="radio" name="p-type" value="individual" class="accent-pine"> Individual
+                  </label>
+                </div>
+              </fieldset>
+              <label class="flex items-start gap-3 text-sm text-ink/70">
+                <input type="checkbox" name="gdpr" required class="mt-1 accent-pine">
+                <span>I agree to the processing of my personal data in accordance with the <a href="#privacy" class="underline text-pine">Privacy Policy</a> (GDPR). I can withdraw consent at any time.</span>
+              </label>
+              <p class="err hidden text-sm text-red-700" role="alert"></p>
+              <button type="submit" class="w-full bg-pine hover:bg-pinedark text-white font-semibold py-3.5 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-pine">Join as a contractor</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-white/80">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5 text-sm">
+      <p>© <span id="year">2026</span> Loqelo. All rights reserved.</p>
+      <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2">
+        <a id="privacy" href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Terms</a>
+        <a href="mailto:hello@loqelo.com" class="hover:text-white"><i class="fa-regular fa-envelope mr-2" aria-hidden="true"></i>hello@loqelo.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Helpers ---------- */
+    const $  = (s, r = document) => r.querySelector(s);
+    const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+    /* ---------- Countries (extend as needed) ---------- */
+    const COUNTRIES = ['Australia','Austria','Belgium','Canada','Denmark','Finland','France','Germany','Ireland','Italy','Netherlands','Norway','Portugal','Singapore','Spain','Sweden','Switzerland','United Kingdom','United States','Other'];
+    $$('.country').forEach(sel => {
+      sel.innerHTML = '<option value="" disabled selected>Select a country</option>' +
+        COUNTRIES.map(c => `<option>${c}</option>`).join('');
+    });
+
+    /* ---------- Tabs ---------- */
+    const tabs = $$('.tab');
+    function showTab(name, focus = false) {
+      tabs.forEach(t => {
+        const on = t.dataset.tab === name;
+        t.setAttribute('aria-selected', on);
+        t.tabIndex = on ? 0 : -1;
+        t.classList.toggle('bg-white', on);
+        t.classList.toggle('shadow-sm', on);
+        t.classList.toggle('text-pine', on);
+        t.classList.toggle('text-ink/60', !on);
+        if (on && focus) t.focus();
+      });
+      $$('.tab-panel').forEach(p => {
+        const on = p.id === 'panel-' + name;
+        p.hidden = !on;
+        if (on) { p.classList.remove('fade-in'); void p.offsetWidth; p.classList.add('fade-in'); }
+      });
+    }
+    tabs.forEach(t => t.addEventListener('click', () => showTab(t.dataset.tab)));
+    $('[role=tablist]').addEventListener('keydown', e => {            // arrow-key support
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      const names = tabs.map(t => t.dataset.tab);
+      const cur = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
+      showTab(names[(cur + (e.key === 'ArrowRight' ? 1 : -1) + names.length) % names.length], true);
+    });
+    // Hero CTAs: smooth scroll (CSS) + preselect the matching tab
+    $$('.cta-link').forEach(a => a.addEventListener('click', () => showTab(a.dataset.tab)));
+    showTab('customers');
+
+    /* ---------- Form submission (simulated) ---------- */
+    $$('.wl-form').forEach(form => {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const err = $('.err', form);
+        const email = form.elements.email;
+        let msg = '';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) msg = 'Please enter a valid email address.';
+        else if (!form.elements.country.value) msg = 'Please select a country.';
+        else if (!form.elements.gdpr.checked) msg = 'Please accept the privacy consent to continue.';
+        err.textContent = msg; err.classList.toggle('hidden', !msg);
+        if (msg) return;
+
+        // TODO: replace with fetch('/api/waitlist', { method: 'POST', body: new FormData(form) })
+        form.outerHTML = `
+          <div class="fade-in text-center py-8" role="status">
+            <div class="w-16 h-16 mx-auto rounded-full bg-pine/10 text-pine grid place-items-center text-3xl"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+            <h3 class="mt-5 text-2xl font-bold">Thank you for joining the waitlist!</h3>
+            <p class="mt-2 text-ink/70">We'll email you as soon as Loqelo launches in February 2027.</p>
+          </div>`;
+      });
+    });
+
+    /* ---------- Mock video player ---------- */
+    let timer;
+    $('#play').addEventListener('click', () => {
+      const bar = $('#bar'), btn = $('#play'), status = $('#status');
+      const playing = btn.dataset.playing === '1';
+      clearTimeout(timer);
+      if (playing) {
+        btn.dataset.playing = '0';
+        btn.innerHTML = '<i class="fa-solid fa-play ml-1" aria-hidden="true"></i>';
+        btn.setAttribute('aria-label', 'Play promotional video');
+        bar.classList.remove('progress'); bar.style.width = '0';
+        status.textContent = 'Promo video · 0:45';
+        return;
+      }
+      btn.dataset.playing = '1';
+      btn.innerHTML = '<i class="fa-solid fa-pause" aria-hidden="true"></i>';
+      btn.setAttribute('aria-label', 'Pause promotional video');
+      bar.classList.add('progress');
+      status.textContent = 'Playing demo…';
+      timer = setTimeout(() => $('#play').click(), 12000);
+    });
+
+    /* ---------- Mock i18n + language auto-detection ---------- */
+    const I18N = {
+      en: { nav_cta:'Join waitlist', badge:'Coming in February 2027', title:'Everything your place needs.', sub:'One place to find trusted professionals for your home, garden and office. Describe the job, compare offers, choose with confidence.', cta_customer:'I need a service', cta_pro:'I provide services', media_title:'See Loqelo in action', how_title:'How it works', step1:'Describe your need', step2:'Get matched with providers', step3:'Receive offers & select', wl_title:'Join the waitlist', tab_customers:'Customers', tab_contractors:'Contractors' },
+      de: { nav_cta:'Warteliste', badge:'Start im Februar 2027', title:'Alles, was Ihr Zuhause braucht.', sub:'Ein Ort für vertrauenswürdige Profis für Haus, Garten und Büro. Auftrag beschreiben, Angebote vergleichen, sicher entscheiden.', cta_customer:'Ich suche einen Service', cta_pro:'Ich biete Services an', media_title:'Loqelo in Aktion', how_title:'So funktioniert es', step1:'Bedarf beschreiben', step2:'Passende Anbieter finden', step3:'Angebote erhalten & auswählen', wl_title:'Auf die Warteliste', tab_customers:'Kunden', tab_contractors:'Dienstleister' },
+      fr: { nav_cta:'Liste d’attente', badge:'Lancement en février 2027', title:'Tout ce dont votre lieu a besoin.', sub:'Un seul endroit pour trouver des professionnels de confiance pour la maison, le jardin et le bureau. Décrivez, comparez, choisissez.', cta_customer:'Je cherche un service', cta_pro:'Je propose des services', media_title:'Loqelo en action', how_title:'Comment ça marche', step1:'Décrivez votre besoin', step2:'Trouvez des prestataires', step3:'Recevez des offres et choisissez', wl_title:'Rejoindre la liste d’attente', tab_customers:'Clients', tab_contractors:'Prestataires' },
+      es: { nav_cta:'Lista de espera', badge:'Lanzamiento en febrero de 2027', title:'Todo lo que tu espacio necesita.', sub:'Un solo lugar para encontrar profesionales de confianza para casa, jardín y oficina. Describe, compara y elige con seguridad.', cta_customer:'Necesito un servicio', cta_pro:'Ofrezco servicios', media_title:'Loqelo en acción', how_title:'Cómo funciona', step1:'Describe lo que necesitas', step2:'Conecta con profesionales', step3:'Recibe ofertas y elige', wl_title:'Únete a la lista de espera', tab_customers:'Clientes', tab_contractors:'Profesionales' }
+    };
+
+    function setLanguage(code) {
+      const dict = I18N[code] || I18N.en;
+      document.documentElement.lang = I18N[code] ? code : 'en';
+      $$('[data-i18n]').forEach(el => { const v = dict[el.dataset.i18n]; if (v) el.textContent = v; });
+      $('#lang').value = I18N[code] ? code : 'en';
+      try { localStorage.setItem('loqelo-lang', code); } catch (_) {}
+    }
+    // Mock detection: saved choice → browser language → English.
+    // In production, add IP geolocation or an Accept-Language check on the server.
+    function detectLanguage() {
+      let saved = null;
+      try { saved = localStorage.getItem('loqelo-lang'); } catch (_) {}
+      if (saved && I18N[saved]) return saved;
+      const browser = (navigator.languages && navigator.languages[0] || navigator.language || 'en').slice(0, 2).toLowerCase();
+      return I18N[browser] ? browser : 'en';
+    }
+    $('#lang').addEventListener('change', e => setLanguage(e.target.value));
+    setLanguage(detectLanguage());
+
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
